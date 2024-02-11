@@ -1,7 +1,7 @@
 class InventoryPage{
 
     elements = {
-        productTitle: ()=> cy.get('[class="nav navbar-nav"]')
+        carousel: ()=> cy.get('[id="slider-carousel"]')
     }
 
 
