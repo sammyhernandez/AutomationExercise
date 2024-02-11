@@ -1,4 +1,4 @@
-import login from "../Pages/login";
+import login from "../Pages/loginPage";
 import inventory from "../Pages/inventory";
 
 describe('Login', ()=> {
@@ -6,11 +6,18 @@ describe('Login', ()=> {
         cy.visit('https://automationexercise.com/login')
     })
 
-    it('Iniciar sesión de forma correcta', ()=>{
+    it('Iniciar sesión con credenciales correcta', ()=>{
         login.typeEmail('test224@test.com')
         login.typePassword('test')
         login.clickLoginButton()
 
-        inventory.elements.productTitle().should('contain','Products')
+        inventory.elements.carousel().should('to.be.visible')
+    })
+
+    it('Iniciar sesión con credenciales incorrecta', ()=>{
+        login.typeEmail('test224@test.com')
+        login.typePassword('test2')
+        login.clickLoginButton()
+        login.errorMesageText()
     })
 })
