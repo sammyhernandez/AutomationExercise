@@ -248,7 +248,7 @@
     "cypress:open": "cypress open",
     "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/Integration/*.cy.js",
     "cypress:edge": "cypress run --browser edge --spec cypress/e2e/Integration/*.cy.js",
-    "cypress:runChromeHeadless": "cypress run --headed --browser chrome --spec cypress/e2e/Integration/*cy.js"
+    "cypress:runChromeHeadless": "cypress run --headed --browser chrome --spec cypress/e2e/Integration/*.cy.js"
   },
   "repository": {
     "type": "git",
