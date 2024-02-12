@@ -20,4 +20,8 @@ describe('Login', ()=> {
         login.clickLoginButton()
         login.errorMesageText()
     })
+
+    it('Agregar producto al carrito de compras',()=>{
+        
+    })
 })
