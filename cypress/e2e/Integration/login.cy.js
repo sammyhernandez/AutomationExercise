@@ -21,7 +21,7 @@ describe('Login', ()=> {
         login.errorMesageText()
     })
 
-    it('Agregar producto al carrito de compras!',()=>{
+    it('Agregar producto al carrito de compras!!',()=>{
 
     })
 })
