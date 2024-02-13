@@ -1,5 +1,5 @@
 import login from "../Pages/loginPage";
-import inventory from "../Pages/inventory";
+import inventory from "../Pages/inventoryPage";
 
 describe('Login', ()=> {
     beforeEach(()=>{
@@ -19,9 +19,5 @@ describe('Login', ()=> {
         login.typePassword('test2')
         login.clickLoginButton()
         login.errorMesageText()
-    })
-
-    it('Agregar producto al carrito de compras!!',()=>{
-
     })
 })
