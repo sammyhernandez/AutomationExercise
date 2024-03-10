@@ -1,6 +1,6 @@
 name: Cypress test
 on: [push]
-jobns:
+jobs:
   cypress-run:
   runs-on: ubuntu-lastest
   steps:
