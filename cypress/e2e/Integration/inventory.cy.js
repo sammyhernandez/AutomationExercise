@@ -10,6 +10,7 @@ describe('Productos',() =>{
         login.clickLoginButton()
     })
     it('Agregando producto al carrro de compras',()=>{
+        inventory.validateProductList()
         inventory.viewProduct()
         inventory.addToCar()
         inventory.viewCar()

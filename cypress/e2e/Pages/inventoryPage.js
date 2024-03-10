@@ -2,6 +2,7 @@ class InventoryPage{
 
     elements = {
         carousel: ()=> cy.get('[id="slider-carousel"]'),
+        productList: ()=> cy.get('[class="col-sm-9 padding-right"]'),
         product: ()=> cy.get('.features_items > :nth-child(3) > .product-image-wrapper'),
         productDetail: ()=> cy.get('[href="/product_details/1"]'),
         productDetailTitle: ()=> cy.get('[class="product-information"]'),
@@ -11,6 +12,13 @@ class InventoryPage{
         viewCarButton: ()=> cy.get('a[href="/view_cart"]'),
         productInTheCart: ()=> cy.get('[id="product-1"]')
         
+   }
+
+   validateProductList(){
+    this.elements.productList().find('div').then(products =>{
+      cy.wrap(products).should('contain', 'Men Tshirt')
+      //cy.wrap(products).should('to.have.text','Men Tshirt').click()
+    })
    }
    viewProduct(){
     this.elements.product().eq(0).should('to.be.visible')
